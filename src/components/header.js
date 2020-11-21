@@ -1,23 +1,15 @@
-import {HeaderContainer, HeaderNavBar, HeaderButtonStyled, HeaderSearch} from '../styles/header-styles.js'
+import {HeaderContainer, HeaderNavBar} from '../styles/header-styles.js'
 import {Logo} from './utils'
-
-function HeaderButton(props) {
-    return (
-        <HeaderButtonStyled href = "">
-            {props.heading}
-        </HeaderButtonStyled>
-    );
-}
+import HeaderButton from '../components/header-button'
 
 function Header() {
     return(
         <HeaderContainer className = 'header'>
                 <HeaderNavBar>
                     <Logo height = '30px' width = '300px' />
-                    <HeaderSearch placeholder = 'Search Products'/>
-                    <HeaderButton heading = 'Home' />
+                    <HeaderButton heading = 'Home' link = '/' />
                     <HeaderButton heading = 'Cart' />
-                    <HeaderButton heading = 'Catalog' />
+                    <HeaderButton heading = 'Catalog' link = '/catalog' />
                     <HeaderButton heading = 'Brands' />
                 </HeaderNavBar>
         </HeaderContainer>

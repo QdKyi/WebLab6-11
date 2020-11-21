@@ -4,7 +4,7 @@ export const ProductsContainer = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 10%;
+    margin: 0 auto;
     width: 1000px;
 `;
 
@@ -21,6 +21,7 @@ export const ProductContainer = styled.div`
     flex: 1 1 auto;
     flex-direction: column;
     background-color: #ededed;
+    margin-top: 15px;
     cursor: pointer;
     border: 1px solid rgba(0,0,0,.125);
     max-width: 200px;

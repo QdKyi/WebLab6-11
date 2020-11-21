@@ -4,13 +4,15 @@ export const HeaderContainer = styled.header`
     display: flex;
     width: 100%;
     margin: 0 auto;
-    position: fixed;
+    position: sticky;
+    top: 0;
     background-color: white;
 `;
 
 export const HeaderNavBar = styled.ul`
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 1000px;
     margin: 16px auto;
 `

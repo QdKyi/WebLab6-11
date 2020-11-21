@@ -5,7 +5,31 @@ const { useState } = require("react");
 
 function ProductsList(props) {
 
-    const [equip, setEquip] = useState([
+    const [equip] = useState([
+        {
+            header: 'Used *Other Brand 15 WAY OUUL STAND BAG Golf / Stand Bags',
+            price: 123,
+            text: 'Used | Durham, NC',
+            img: 'https://playitagainsports.imgix.net/images/11614-S000126443-1?auto=compress,format&amp;fit=clip&amp;w=350'
+        },
+        {
+            header: 'Used *Other Brand 15 WAY OUUL STAND BAG Golf / Stand Bags',
+            price: 123,
+            text: 'Used | Durham, NC',
+            img: 'https://playitagainsports.imgix.net/images/11614-S000126443-1?auto=compress,format&amp;fit=clip&amp;w=350'
+        },
+        {
+            header: 'Used *Other Brand 15 WAY OUUL STAND BAG Golf / Stand Bags',
+            price: 123,
+            text: 'Used | Durham, NC',
+            img: 'https://playitagainsports.imgix.net/images/11614-S000126443-1?auto=compress,format&amp;fit=clip&amp;w=350'
+        },
+        {
+            header: 'Used *Other Brand 15 WAY OUUL STAND BAG Golf / Stand Bags',
+            price: 123,
+            text: 'Used | Durham, NC',
+            img: 'https://playitagainsports.imgix.net/images/11614-S000126443-1?auto=compress,format&amp;fit=clip&amp;w=350'
+        },
         {
             header: 'Used *Other Brand 15 WAY OUUL STAND BAG Golf / Stand Bags',
             price: 123,
@@ -34,7 +58,7 @@ function ProductsList(props) {
 
     return(
         <ProductsContainer>
-            <LatestProducts>LATEST PRODUCTS</LatestProducts>
+            <LatestProducts>{props.header}</LatestProducts>
 
             {equip.map((equip, index) =>
                     <ProductContainer key={`Item${index}`}>

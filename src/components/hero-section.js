@@ -1,10 +1,10 @@
 import {HeroContainer, HeroHeader, HeroInfo, HeroText, HeroButtonText, HeroButton} from '../styles/hero-section-styles'
 
-function HeroSection(props) {
+function HeroSection() {
     return(
         <HeroContainer>
             <HeroInfo>
-                <HeroHeader>{props.header}</HeroHeader>
+                <HeroHeader>Very important text!</HeroHeader>
                 <HeroButtonText>
                     <HeroButton>Buy Gear</HeroButton>
                     <HeroText>Online & In Store</HeroText>
