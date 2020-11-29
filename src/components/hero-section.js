@@ -6,7 +6,9 @@ function HeroSection() {
             <HeroInfo>
                 <HeroHeader>Very important text!</HeroHeader>
                 <HeroButtonText>
-                    <HeroButton>Buy Gear</HeroButton>
+                    <a href = '/catalog'>
+                        <HeroButton>Buy Gear</HeroButton>
+                    </a>
                     <HeroText>Online & In Store</HeroText>
                 </HeroButtonText>       
             </HeroInfo>

@@ -11,7 +11,6 @@ export const FilterContainer = styled.div `
 export const SelectForm = styled.form`
     display: flex;
     width: 500px;
-    justify-content: space-around;
     align-items: center;
 `
 
@@ -26,7 +25,7 @@ export const Select = styled.select`
 `
 
 export const SearchContainer = styled.div`
-    width: 400px;
+    width: 500px;
     display: flex;
     justify-content: space-around;
 `
@@ -47,4 +46,9 @@ export const SearchButton = styled.button`
     font-size: 16px;
     background-color: white;
     border-color: black;
+`
+export const SelectLabel = styled.label`
+    color: black;
+    font-size: 22px;
+    margin-right: 20px;
 `

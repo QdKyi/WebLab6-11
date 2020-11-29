@@ -1,23 +1,14 @@
-import {SelectForm, Select} from '../styles/filter-tile-styles'
+import {SelectForm, Select, SelectLabel} from '../styles/filter-tile-styles'
 
-function SelectContainer() {
+function SelectContainer({ name, options, state: [value, setValue], ...props }) {
     return (
         <SelectForm>
-            
-            <Select name='by type' >
-                <option value='any'>Any type</option>
-                <option value='iceAxe'>Ice axe</option>
-                <option value='weight'>Another type</option>
-            </Select>
-            <Select name='by price'>
-                <option value='any'>Any price</option>
-                <option value='price'>By lowest price</option>
-                <option value='weight'>By biggest price</option>
-            </Select>
-            <Select name='by condition'>
-                <option value='any'>Any condition</option>
-                <option value='used'>Used</option>
-                <option value='new'>New</option>
+             <SelectLabel htmlFor='filter'>{name}</SelectLabel>
+            <Select name='filter' value={value} onChange={e => setValue(e.target.value)} {...props}>
+                <option value='None'>No Filter</option>
+                {options.map((thisOption) =>
+                    <option key={thisOption} value={thisOption}>{thisOption}</option>
+                )}
             </Select>
         </SelectForm>
     );

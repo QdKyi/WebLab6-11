@@ -15,6 +15,7 @@ export const HeaderNavBar = styled.ul`
     align-items: center;
     width: 1000px;
     margin: 16px auto;
+    padding: 0;
 `
 
 export const HeaderButtonStyled = styled.a`

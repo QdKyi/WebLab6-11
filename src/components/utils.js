@@ -10,7 +10,7 @@ const icons = [{ name: 'facebook', src: facebook, link: '#' }, { name: 'twitter'
 
 export function Logo(props) {
     return (
-        <a href = ''>
+        <a href = '/'>
             <img src={logo} alt="HeaderLogo" height={props.height} width={props.width} />
         </a>
     );

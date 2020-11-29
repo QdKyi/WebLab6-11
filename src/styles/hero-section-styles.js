@@ -28,6 +28,11 @@ export const HeroInfo = styled.div`
 export const HeroButtonText = styled.div`
     display: flex;
     flex-direction: column;
+    a {
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+    }
 `;
 
 export const HeroButton = styled.button`

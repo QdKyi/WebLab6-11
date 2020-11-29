@@ -16,13 +16,12 @@ export const LatestProducts = styled.div`
     width: 100%;
 `;
 
-export const ProductContainer = styled.div`
+export const ProductContainer = styled.a`
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
     background-color: #ededed;
-    margin-top: 15px;
-    cursor: pointer;
+    margin-top: 25px;
     border: 1px solid rgba(0,0,0,.125);
     max-width: 200px;
     text-align: left;
@@ -53,3 +52,13 @@ export const ProductInfo = styled.div`
     flex-wrap: wrap;
     margin: 0 10%;
 `;
+
+export const ViewMore = styled.button`
+    width: 20%;
+    height: 40px;
+    margin: 30px 40%;
+    padding: 8px 10px;
+    font-size: 22px;
+    font-weight: 700;
+    background-color: transparent;
+`
