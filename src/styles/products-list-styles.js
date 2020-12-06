@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const ProductsContainer = styled.div`
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin: 0 auto;
     width: 1000px;
 `;

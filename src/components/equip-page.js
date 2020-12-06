@@ -1,22 +1,31 @@
-import { Image } from '../components/utils'
+import { Image, Spinner } from '../components/utils'
 import {UpperContainer, EquipInfo, BottomContainer, ButtonsContainer, Button, PriceContainer
 } from '../styles/equip-page-styles'
 import { Link, useParams } from "react-router-dom";
+import { useState, useEffect } from 'react'
+import { getToolById } from '../connection.js'
 
-export default function EquipPage(props) {
+export default function EquipPage() {
 
     const { id } = useParams();
-    const item = props.itemsList.find(item => (item.id === parseInt(id)));
+    const [equip, setEquip] = useState(null);
 
+    useEffect(() => {
+        (async function () {
+            setEquip(await getToolById(id));
+        })()
+    });
+
+    if (!equip) { return <Spinner /> }
     return (
         <>
             <UpperContainer>
-                <Image img={item.img} height='400px' width='360px' />
+                <Image img={equip.img} height='400px' width='360px' />
                 <EquipInfo>
-                    <h1>{item.header}</h1>
+                    <h1>{equip.header}</h1>
                     <PriceContainer>
-                    <div>{item.text}</div>
-                    <div>${item.price}</div>
+                    <div>{equip.condition}{equip.text}</div>
+                    <div>${equip.price}</div>
                     </PriceContainer>
                 </EquipInfo>
             </UpperContainer>

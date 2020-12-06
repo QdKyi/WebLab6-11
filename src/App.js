@@ -13,13 +13,13 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/">
-          <HomePage itemsList={equip} />
+          <HomePage />
         </Route>
         <Route path="/catalog">
-          <CatalogPage itemsList={equip} />
+          <CatalogPage />
         </Route>
         <Route path="/equip/:id">
-          <EquipPage itemsList={equip} />
+          <EquipPage equipList={equip} />
         </Route>
       </Switch>
       <Footer />
