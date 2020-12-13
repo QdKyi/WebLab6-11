@@ -5,15 +5,16 @@ import linkedIn from '../assets/linkedin.svg'
 import google from '../assets/google_icon.svg'
 import {FooterMedia} from '../styles/footer-styles.js'
 import '../styles/spinner.css'
+import { Link } from "react-router-dom";
 
 const icons = [{ name: 'facebook', src: facebook, link: '#' }, { name: 'twitter', src: twitter, link: '#' }, { name: 'google', src: google, link: '#' },
 { name: 'linkedIn', src: linkedIn, link: '#' }]
 
 export function Logo(props) {
     return (
-        <a href = '/'>
+        <Link to="/">
             <img src={logo} alt="HeaderLogo" height={props.height} width={props.width} />
-        </a>
+        </Link>
     );
 }
 

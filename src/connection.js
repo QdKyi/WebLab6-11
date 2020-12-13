@@ -9,17 +9,17 @@ const instance = axios.create({
 });
 
 export async function getTools() {
-    await delay(2000);
+    await delay(100);
     return (await instance.get()).data;
 }
 
 export async function getToolById(id) {
-    await delay(2000);
+    await delay(100);
     return (await instance.get(`/${id}`)).data;
 }
 
 export async function getFilteredTools(type, condition) {
-    await delay(2000);
+    await delay(100);
     return (await instance.get(`/filters/${type}&${condition}`)).data;
 }
 
