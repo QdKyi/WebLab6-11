@@ -18,6 +18,7 @@ export const EquipContainer = styled.div`
     border-radius: 16px;
     display: flex;
     align-items: center;
+    margin: 5px 0;
     h1 {
         width: 400px;
         margin: 0 20px 0 20px;

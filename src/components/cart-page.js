@@ -40,9 +40,11 @@ export default function CartPage() {
             <h1>Total: {totalPrice}$</h1>
             <NavButtonsContainer>
                 <Link to='/catalog'>
-                    <NavButton>Back</NavButton>
+                    <NavButton>Catalog</NavButton>
                 </Link>
-                <NavButton >Continue</NavButton>
+                <Link to='/checkout'>
+                    <NavButton >Continue</NavButton>
+                </Link>
             </NavButtonsContainer>
         </CartPageContainer>
     );

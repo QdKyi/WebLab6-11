@@ -1,5 +1,5 @@
 import { createReducer } from '@reduxjs/toolkit'
-import { add, remove, increment, decrement } from '../store/actions.js';
+import { add, remove, increment, decrement, reset } from '../store/actions.js';
 
 const equipReducer = createReducer([], (builder) => {
     builder
@@ -26,6 +26,12 @@ const equipReducer = createReducer([], (builder) => {
         let index = state.findIndex(equip => equip.id === action.payload.id);
         if (state[index].counter > 1) {
             state[index].counter -= 1;
+        }
+      })
+      builder
+    .addCase(reset, (state) => {
+        if (state) {
+          state.splice(0, state.length);
         }
       })
 })

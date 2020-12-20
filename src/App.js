@@ -7,6 +7,8 @@ import CatalogPage from './components/catalog-page'
 import HomePage from './components/home-page'
 import EquipPage from './components/equip-page'
 import CartPage from './components/cart-page'
+import CheckoutPage from './components/checkout-page'
+import SuccessPage from './components/success-page'
 
 function App() {
   return (
@@ -24,6 +26,12 @@ function App() {
         </Route>
         <Route path="/cart">
           <CartPage />
+        </Route>
+        <Route path="/checkout">
+          <CheckoutPage />
+        </Route>
+        <Route path="/success">
+          <SuccessPage />
         </Route>
       </Switch>
       <Footer />
