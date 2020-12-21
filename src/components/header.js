@@ -16,7 +16,7 @@ function Header() {
     }
   
     const logout = () => {
-      localStorage.clear();
+      localStorage.setItem("isAuth", false);
       history.push("/login");
       history.go(0);
     };

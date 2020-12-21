@@ -12,10 +12,11 @@ const RegisterPage = () => {
     history.push("/login");
   };
 
-  const submitForm = (values) => {
+  const submit = (values) => {
     localStorage.setItem("username", values["username"]);
     localStorage.setItem("email", values["email"]);
     localStorage.setItem("password", values["password"]);
+    localStorage.setItem("isAuth", false);
     history.push("/login");
   };
 
@@ -57,7 +58,7 @@ const RegisterPage = () => {
             .required("Required")
             .oneOf([Yup.ref("password"), null], "Passwords doesnt match"),
         })}
-        onSubmit={submitForm}
+        onSubmit={submit}
       >
         {({ handleSubmit }) => (
           <>

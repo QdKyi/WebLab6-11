@@ -8,14 +8,15 @@ import * as Yup from "yup"
 const LoginPage = () => {
   let history = useHistory();
 
-  const goToSignUp = () => {
+  const goToRegister = () => {
     history.push("/register");
   };
 
-  const submitForm = (values) => {
+  const submit = (values) => {
   const username = localStorage.getItem("username");
   const password = localStorage.getItem("password");
   const email = localStorage.getItem("email");
+  localStorage.setItem("isAuth", true);
   if ((username === values.username || email === values.username) && password === values.password) {
     history.push("/");
     history.go(0);
@@ -51,7 +52,7 @@ const LoginPage = () => {
               "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character"
             ),
         })}
-        onSubmit={submitForm}
+        onSubmit={submit}
       >
         {({ handleSubmit }) => (
           <LoginForm>
@@ -60,7 +61,7 @@ const LoginPage = () => {
             <LoginButton onClick={handleSubmit}>Submit</LoginButton>
             <p>
               Don't have an account?{" "}
-              <span onClick={goToSignUp}>Sign Up</span>
+              <span onClick={goToRegister}>Sign Up</span>
             </p>
           </LoginForm>
         )}
