@@ -23,7 +23,3 @@ export const HeaderButtonStyled = styled.a`
     text-decoration: none;
     color: black;
 `
-
-export const HeaderSearch = styled.input`
-
-`
